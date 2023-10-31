@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="{% static 'bootstrap.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid bg-dark">
+    {% include 'navbar.html'%}
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            {% block msg %}
+            {% endblock msg %}
+
+        </div>
+    </div>
+
+    <div class="row">
+        {% block side %}
+        {% endblock side %}
+
+        {% block content %}
+        {% endblock content %}
+    </div>
+
+</div>
+
+
+<script src="{% static 'jquery.js' %}"></script>
+<script src="{% static 'popper.js' %}"></script>
+<srcipt src="{% static 'bootstrap.js' %}"></srcipt>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
